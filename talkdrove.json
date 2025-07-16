@@ -8,12 +8,12 @@
   
   "env": {
     "SESSION_ID": {
-      "description": "Must Start with 'PEACE~'",
+      "description": "PEACE~jUdRjCzK#OyJUYw_LrLjkC5AYATjqxWiLLIIO2hDkhgED_JIiPiY",
       "required": true,
       "value": ""
     },
       "BOT_NAME": {
-        "description": "write here your bot name.",
+        "description": "𝐏𝐄𝐀𝐂𝐄-𝐇𝐔𝐁",
         "required": true,
         "value": "PEACE-HUB"      
     },  
@@ -30,12 +30,12 @@
     },
     
     "OWNER_NAME": {
-      "description": "Put Owner Name Here",
+      "description": "𝐃𝐄𝐕𝐈𝐋😈",
       "required": true,
       "value": "PEACEMAKER"
     },
     "OWNER_NUMBER": {
-      "description": "Put only one Owner Number Here",
+      "description": "918867169094",
       "required": true,
       "value": "254752818245"
     },
