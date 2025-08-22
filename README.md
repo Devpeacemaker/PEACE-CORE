@@ -4,7 +4,7 @@
     
 <div align="center">     
   <a href="https://git.io/typing-svg">     
-    <img src="https://readme-typing-svg.demolab.com?font=Algerian&size=60&pause=1000&color=df2e46&center=true&width=910&height=100&lines=PEACE-HUB;Multi+Device+Whatsapp+Bot;Coded+By+PEACEMAKER" alt="Typing SVG" />    
+    <img src="https://readme-typing-svg.demolab.com?font=Algerian&size=60&pause=1000&color=df2e46&center=true&width=910&height=100&lines=PEACE-CORE;Multi+Device+Whatsapp+Bot;Coded+By+PEACEMAKER" alt="Typing SVG" />    
   </a>     
 </div>     
     
