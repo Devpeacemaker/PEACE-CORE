@@ -13,7 +13,7 @@
 </p>    
     
 <p align="center">    
-  <img src="https://files.catbox.moe/l9wrar.jpg" />    
+  <img src="[https://files.catbox.moe/6qoq0s.jpg]" />    
 </p>    
     
 <!-- 📊 STATS & HERO ANIMATION (Updated Colors) -->    
