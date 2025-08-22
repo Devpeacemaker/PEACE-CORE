@@ -13,7 +13,7 @@
 </p>    
     
 <p align="center">    
-  <img src="https://files.catbox.moe/5m0i6t.jpg" />    
+  <img src="https://files.catbox.moe/l9wrar.jpg" />    
 </p>    
     
 <!-- 📊 STATS & HERO ANIMATION (Updated Colors) -->    
@@ -28,12 +28,12 @@
   </p>    
    
   <div align="center">    
-    <img src="https://github.com/Devpeacemaker/PEACE-MD/blob/main/assets/techwave.gif?raw=true" width="80%"/>    
+    <img src="https://github.com/Devpeacemaker/PEACE-CORE/blob/main/assets/techwave.gif?raw=true" width="80%"/>    
   </div>    
     <div align="center" style="margin-top: 30px;">
   <a href="https://peacehubvercel.vercel.app/" target="_blank" style="display: inline-block; width: 90%; max-width: 400px;">
-    <img src="https://img.shields.io/badge/🚀 Deploy PEACE HUB Now-7A3E9D?style=for-the-badge&logo=vercel&logoColor=white" 
-         alt="Deploy PEACE HUB Now" 
+    <img src="https://img.shields.io/badge/🚀 Deploy PEACE CORE Now-7A3E9D?style=for-the-badge&logo=vercel&logoColor=white" 
+         alt="Deploy PEACE CORE Now" 
          style="width: 100%; height: auto; border-radius: 8px;" />
   </a>
 </div>
