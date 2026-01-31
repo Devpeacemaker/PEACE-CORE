@@ -30,13 +30,11 @@ antistatusmention: 'off',
   autoview: 'on',
   wapresence: 'recording',
   antiedit: 'private',
-    menuTitle: "KING MD VIP",
+    menuTitle: "PEACE-CORE",
     antigroupmention: 'off'
 };
 
-// ================= MODE DETECTION =================
-// If DATABASE_URL exists, use Postgres (Heroku/Render). 
-// If NOT, use SQLite (Panel/VPS) and sync owner from set.js.
+
 const usePostgres = !!process.env.DATABASE_URL;
 
 let initializeDatabase, getSettings, updateSetting, addSudoOwner, removeSudoOwner, getSudoOwners, isSudoOwner, addBadword, removeBadword, getBadwords;
