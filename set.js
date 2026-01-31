@@ -1,9 +1,6 @@
 const fs = require('fs');
 if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname + '/.env' });
 
-// ================= UNIVERSAL SETTINGS =================
-// 1. You can set these in your Panel "Variables" tab.
-// 2. OR you can edit the "Default" values (the string after ||) directly here.
 
 const sessionName = 'session';
 const session = process.env.SESSION || '';
@@ -11,21 +8,17 @@ const appname = process.env.APP_NAME || '';
 const herokuapi = process.env.HEROKU_API || '';
 
 // 🔹 BOT IDENTITY
-const botname = process.env.BOTNAME || 'KING-M';
+const botname = process.env.BOTNAME || 'ᴘᴇᴀᴄᴇ-ᴄᴏʀᴇ';
 const author = process.env.STICKER_AUTHOR || 'ᴄᴏʀᴇ';
 const packname = process.env.STICKER_PACKNAME || 'ᴘᴇᴀᴄᴇ';
 
-// 🔹 OWNER SETTINGS
-// Add your number below inside the quotes (No '+' sign)
-// If you have multiple owners, separate them with commas: '2547XXXX,2547YYYY'
-const dev = process.env.DEV || '254769995625';
+
+const dev = process.env.DEV || '254752818245';
 const owner = dev.split(",");
 const mycode = process.env.CODE || '254';
 const port = process.env.PORT || 8080;
 
-// 🔹 DATABASE
-// This is the Backup/Display URL. 
-// Note: The actual connection logic is handled in config.js (Hybrid Mode).
+
 const databaseUrl = process.env.DATABASE_URL || "postgresql://neondb_owner:npg_lSc0PpxgeYn6@ep-rapid-forest-a4hm0939-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require";
 
 // 🔹 VISUALS & MENUS
@@ -61,8 +54,7 @@ module.exports = {
   databaseUrl
 };
 
-// ================= WATCHER =================
-// This reloads the file automatically if you edit it while the bot is running.
+
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
   fs.unwatchFile(file);
