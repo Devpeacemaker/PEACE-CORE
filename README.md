@@ -13,7 +13,7 @@
 </p>    
     
 <p align="center">    
-  <img src="https://i.imgur.com/Acuxyfo.jpeg" />    
+  <img src="https://i.imgur.com/Sdopa1Q.jpeg" />    
 </p>    
     
 <!-- 📊 STATS & HERO ANIMATION (Updated Colors) -->    
